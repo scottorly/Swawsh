@@ -1,12 +1,10 @@
-# Swawsh
+import Foundation
 
-A cross platform library for signing AWS Signature Version 4 requests written in Swift.
+let accessKeyId = "AKIAIQQRR434HDMAKTKA"
+let secretAccessKey = "zcGiGzKARemKnhtHuep9AecLU2fCAeojiILkNM7n"
 
-http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html
-
-### Example Usage (macOS)
-```swift
 let swawsh = Swawsh.sharedInstance
+
 if let authorization = swawsh.generateCredential(
     method: .GET,
     path: "/",
@@ -24,14 +22,16 @@ if let authorization = swawsh.generateCredential(
     request.addValue(authorization, forHTTPHeaderField: "Authorization")
     request.addValue(swawsh.getDate(), forHTTPHeaderField: "x-amz-date")
     request.addValue(Swawsh.emptyStringHash, forHTTPHeaderField:"x-amz-content-sha256")
-    request.addValue("ec2.amazonaws.com", forHTTPHeaderField: "Host")
     request.httpMethod = "GET"
-
+    
     let session = URLSession.shared
     let task = session.dataTask(with: request) { data, response, error in
+        print(error)
+        print(response)
         let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
         print(responseString)
     }
     task.resume()
 }
-```
+
+RunLoop.main.run()
