@@ -53,17 +53,3 @@ struct SwaswshHeader {
             "\(payloadDigest)"
     }
 }
-
-/*
- 1. Canonical request
- 
- method \n
- uri \n
- query string "\n"
- "x-amz-content-sha256:" payload digest
- "x-amz-date:" date header
- "\n" ???
- headers
- payload digest
- 
- */
