@@ -1,6 +1,6 @@
 import Foundation
 
-class Swawsh {
+class SwawshCredential {
     static let emptyStringHash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     let dateService: DateServiceProtocol
     let digestService: DigestServiceProtocol
@@ -14,7 +14,7 @@ class Swawsh {
     let amzDateFormatter = DateFormatter()
     let timeZone = TimeZone(abbreviation: "GMT")
     
-    static let sharedInstance = Swawsh(
+    static let sharedInstance = SwawshCredential(
         dateService: DateService(
             date: Date(),
             dateFormatter: DateFormatter.dateFormatterFactory(),

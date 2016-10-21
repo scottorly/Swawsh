@@ -68,13 +68,13 @@ class SwawshTests: XCTestCase {
     var fakeDigestService: FakeDigestService?
     var fakeDateService: FakeDateService?
     
-    var subject: Swawsh?
+    var subject: SwawshCredential?
     
     override func setUp() {
         super.setUp()
         fakeDigestService = FakeDigestService()
         fakeDateService = FakeDateService()
-        subject = Swawsh(dateService: fakeDateService!, digestService: fakeDigestService!)
+        subject = SwawshCredential(dateService: fakeDateService!, digestService: fakeDigestService!)
     }
     
     override func tearDown() {
