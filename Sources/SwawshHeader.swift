@@ -1,6 +1,6 @@
 import Foundation
 
-enum Method: String {
+public enum Method: String {
     case GET, POST, PUT, DELETE
 }
 

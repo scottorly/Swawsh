@@ -1,6 +1,6 @@
 import Foundation
 
-class SwawshCredential {
+public class SwawshCredential {
     static let emptyStringHash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     let dateService: DateServiceProtocol
     let digestService: DigestServiceProtocol
@@ -14,7 +14,7 @@ class SwawshCredential {
     let amzDateFormatter = DateFormatter()
     let timeZone = TimeZone(abbreviation: "GMT")
     
-    static let sharedInstance = SwawshCredential(
+    public static let sharedInstance = SwawshCredential(
         dateService: DateService(
             date: Date(),
             dateFormatter: DateFormatter.dateFormatterFactory(),
@@ -27,7 +27,7 @@ class SwawshCredential {
         return dateService.getAmzDate()
     }
     
-    func generateCredential(method: Method,
+    public func generateCredential(method: Method,
                             path: String,
                             endPoint: String,
                             queryParameters: String,
