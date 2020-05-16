@@ -1,5 +1,7 @@
 # Swawsh
 
+![](https://github.com/ScottORLY/Swawsh/workflows/Swawsh/badge.svg)
+
 A cross platform library for signing AWS Signature Version 4 requests written in Swift.
 
 http://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-authenticating-requests.html

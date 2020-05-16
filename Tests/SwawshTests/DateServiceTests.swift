@@ -41,10 +41,5 @@ class DateServiceTests: XCTestCase {
         XCTAssertEqual(result, "Yesterday you said tomorrow. JUST DO IT!")
         XCTAssertEqual(simpleresult, "Yesterday you said tomorrow. JUST DO IT!")
     }
-    
-    static var allTests : [(String, (DateServiceTests) -> () throws -> Void)] {
-        return [
-            ("testDateFormat", testDateFormat)
-        ]
-    }
+
 }
