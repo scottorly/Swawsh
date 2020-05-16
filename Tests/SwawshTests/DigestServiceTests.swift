@@ -27,19 +27,13 @@ class DigestServiceTest: XCTestCase {
     }
     
     func testsha256Digest() {
-        let result = subject?.sha256Digest(string: "you;re going to go to the point that most people would quit")
-        XCTAssertEqual(result!, "54adb6b0eb137c912c7a80f048bc0b4924dd21ac28ecb23b2582728a73696df4")
+        let result = subject?.sha256Digest(string: "you're going to go to the point that most people would quit")
+        XCTAssertEqual(result!, "1343ad7259be8568db89aa9422bb9c1309b7b982862f2a6cd09190939c25d155")
     }
     
     func testLowercaseHex() {
         let result = subject?.lowerCaseHexStringFrom(byteArray: [7,3,3,1])
         XCTAssertEqual(result, "07030301")
-    }
-    
-    static var allTests: [(String, (DigestServiceTest) -> () throws -> Void)] {
-        return [
-            ("testSigningKey", testSigningKey)
-        ]
     }
     
 }

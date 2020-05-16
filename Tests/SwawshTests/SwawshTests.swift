@@ -101,11 +101,4 @@ class SwawshTests: XCTestCase {
         let date = subject?.getDate()
         XCTAssertEqual(date!, "I am a really cool formatted date")
     }
-    
-    static var allTests : [(String, (SwawshTests) -> () throws -> Void)] {
-        return [
-            ("testAuthorizationString", testAuthorizationString),
-            ("testGetDate", testGetDate)
-        ]
-    }
 }

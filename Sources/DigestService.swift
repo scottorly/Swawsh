@@ -1,6 +1,7 @@
 import Foundation
 import Cryptor
 
+
 protocol DigestServiceProtocol {
     func lowerCaseHexStringFrom(byteArray: [UInt8]) -> String
     func sha256Digest(string: String) -> String?
